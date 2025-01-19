@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white; 
+            color: black; 
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll; /* Allow scrolling */
+            height: 100vh; /* Ensure full viewport height */
+        }
+
+        header h1 {
+            color: #800080; /* Bright Yellow */
+            margin-top: 10px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 2rem; /* Smaller size */
+            padding-bottom: 8px;
+        }
+
+        nav {
+            margin: 10px 0;
+            padding: 8px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+            border: 3px solid #33FF33; /* Neon Green border */
+        }
+
+        nav .btn {
+            border-radius: 15px;
+            background-color: white;
+            font-weight: bold;
+            transition: 0.3s ease;
+            border: 2px solid #800080; /* Deep Purple border */
+            padding: 6px 12px; /* Smaller padding */
+        }
+
+        nav .btn:hover {
+            transform: scale(1.05);
+            background-color: white;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+            border-color: #33FF33; /* Orange on hover */
+        }
+
+        .btn-warning {
+            background: linear-gradient(45deg, white); 
+            border: none;
+            color: black;
+        }
+
+        .btn-warning:hover {
+            background: linear-gradient(45deg, white);
+            color: black;
+        }
+
+        #size, #speed {
+            font-weight: bold;
+            color: #FF0000; /* Red text */
+            padding: 3px;
+        }
+
+        input[type="range"] {
+            width: 120px; /* Smaller range */
+            accent-color: #FF00FF; /* Hot Pink accent color */
+            margin-left: 8px;
+            border: 2px solid #333333; 
+            padding: 4px;
+        }
+
+        #bars {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 450px;  /* Increased height */
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.05); /* Slight contrast with bars */
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        border: 4px solid #33FF33; /* Neon Green border */
+        }
+
+
+        .bar {
+            margin: 2px;
+            background-color: #FF00FF; /* Hot Pink bars */
+            border-radius: 5px;
+            width: 8px; /* Reduced bar width */
+            transition: height 0.3s ease-in-out;
+            border: 2px solid #333333; 
+        }
+
+    </style>
+</head>
+<header>
+    <h1>Sorting Visualizer</h1>
+    <nav class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <button type="button" class="btn btn-light newArray">New Array</button>
+                <button type="button" class="btn btn-light InputArray">Your Input</button>
+            </div>
+            <div class="col-md-4 text-center">
+                <span id="size">Size:
+                    <input id="arr_sz" type="range" min="5" max="100" step="1" value="60">
+                </span>
+                <br>
+                <span id="speed">Speed:
+                    <input id="speed_input" type="range" min="20" max="300" step="10" value="60">
+                </span>
+            </div>
+            <div class="col-md-4 text-center">
+                <button type="button" class="btn btn-warning bubbleSort">Bubble Sort</button>
+                <button type="button" class="btn btn-warning selectionSort">Selection Sort</button>
+                <button type="button" class="btn btn-warning insertionSort">Insertion Sort</button>
+                <button type="button" class="btn btn-warning quickSort">Quick Sort</button>
+                <button type="button" class="btn btn-warning mergeSort">Merge Sort</button>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+    <div id="bars" class="container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="js_files/inputArray.js"></script>
+    <script src="js_files/sorting.js"></script>
+    <script src="js_files/bubble.js"></script>
+    <script src="js_files/insertion.js"></script>
+    <script src="js_files/merge.js"></script>
+    <script src="js_files/quick.js"></script>
+    <script src="js_files/selection.js"></script>
+</body>
+</html>
