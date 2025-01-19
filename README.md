@@ -2,9 +2,8 @@ Sorting Visualizer
 
 This project is a Sorting Visualizer built with HTML, CSS, and JavaScript, allowing users to visualize how different sorting algorithms work. It offers dynamic user input and an interactive interface to understand sorting better.
 
-🚀 Live Demo
-The project is hosted on Netlify. Check it out here:
-Sorting Visualizer
+🚀 Live Demo  
+The project is hosted on Netlify. Check it out here: [Sorting Visualizer](https://678c7af580a976761599f53a--soft-blini-26a6bd.netlify.app/)
 
 ✨ Features
 Interactive Sorting Visualization: Watch as the sorting algorithms rearrange the array step-by-step.
